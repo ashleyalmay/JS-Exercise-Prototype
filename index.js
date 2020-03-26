@@ -104,6 +104,10 @@ function Car(model, milesPerGallon) {
 Car.prototype.fill = function(gallons) {
   return (this.tank = this.tank += gallons);
 };
+Car.prototype.drive = function(distance) {
+  this.odometer = this.odometer += distance;
+  this.tank = this.tank -= distance / this.milesPerGallon;
+};
 
 /*
   TASK 3
